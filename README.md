@@ -1,3 +1,3 @@
 # Videogames-Catalog
 
-[1](https://zhestovskyys.github.io/Videogames-Catalog/)
+- Чтобы перейти к приложению кликните [сюда](https://zhestovskyys.github.io/Videogames-Catalog/)
