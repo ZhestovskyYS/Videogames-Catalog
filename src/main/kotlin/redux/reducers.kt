@@ -109,7 +109,7 @@ fun addReducer(state: State, action: RAction, newId: Int = -1) =
         is AddGenre ->{
             val addWindow = document.getElementById("addWindow") as HTMLElement
             val nGenre = document.getElementById("newGenre") as HTMLInputElement
-            val newGenre = Genre(nGenre.value)
+            val newGenre = Genre(if(nGenre.value == "") "no name" else nGenre.value)
             addWindow.style.display = "none"
             nGenre.value =""
             State(
