@@ -19,13 +19,13 @@ fun editReducer(state: State, action: RAction) =
             val eCost = document.getElementById("eCost") as HTMLInputElement
             val eMetacritic = document.getElementById("eMetacritic") as HTMLInputElement
             val editGame = Game(
-                eName.value,
+                if(eName.value == "") "no name" else eName.value,
                 eLogo.value,
                 eGenre.value,
                 eStudio.value,
-                eReleseYear.value.toInt(),
-                eCost.value.toInt(),
-                eMetacritic.value.toInt(),
+                if(eReleseYear.value == "") 0 else eReleseYear.value.toInt(),
+                if(eCost.value =="") 0 else eCost.value.toInt(),
+                if(eMetacritic.value =="") 0 else eMetacritic.value.toInt(),
                 state.games.getValue(action.id).possess
             )
             editWindow.style.display ="none"
@@ -75,18 +75,17 @@ fun addReducer(state: State, action: RAction, newId: Int = -1) =
             val cost = document.getElementById("cost") as HTMLInputElement
             val metacrtitic = document.getElementById("meta") as HTMLInputElement
             val newGame = Game(
-                name.value,
+                if(name.value == "") "no name" else name.value,
                 logo.value,
                 genre.value,
                 studio.value,
-                releaseYear.value.toInt(),
-                cost.value.toInt(),
-                metacrtitic.value.toInt(),
+                if(releaseYear.value == "") 0 else releaseYear.value.toInt(),
+                if(cost.value=="") 0 else cost.value.toInt(),
+                if(metacrtitic.value=="") 0 else metacrtitic.value.toInt(),
                 false
             )
             addWindow.style.display = "none"
             name.value = ""
-            genre.value = ""
             releaseYear.value = ""
             studio.value = ""
             logo.value = ""
