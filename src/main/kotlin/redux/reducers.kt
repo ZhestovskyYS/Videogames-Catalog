@@ -38,7 +38,7 @@ fun editReducer(state: State, action: RAction) =
         is EditGenre -> {
             val editWindow = document.getElementById("editWindow") as HTMLElement
             val eGenre = document.getElementById("eGenre") as HTMLInputElement
-            val editGenre = Genre(eGenre.value)
+            val editGenre = Genre(if(eGenre.value == "") "no name" else eGenre.value)
             editWindow.style.display = "none"
             eGenre.value=""
             State(
