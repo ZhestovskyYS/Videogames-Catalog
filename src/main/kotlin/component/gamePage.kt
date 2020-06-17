@@ -26,7 +26,7 @@ val fGamePage =
         div("card") {
             img(classes = "pic") {
                 attrs.src = props.games[props.index].logo
-                attrs.alt = "Wrong link to picture"
+                attrs.alt = "Wrong url to picture"
             }
             div("container") {
                 h4 { +props.games[props.index].name }
