@@ -29,7 +29,7 @@ val gamePageHoc =
             State,
             RAction,
             WrapperAction,
-            GamePageOwnProps,                         // Own Props
+            GamePageOwnProps,
             GamePageStateProps,
             GamePageDispatchProps,
             GamePageProps
